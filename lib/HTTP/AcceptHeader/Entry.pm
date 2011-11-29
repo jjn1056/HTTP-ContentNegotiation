@@ -3,23 +3,20 @@ package HTTP::AcceptHeader::Entry;
 use Moose;
 use Email::MIME::ContentType;
 
-has 'discrete', (
+has 'discrete',
   is => 'ro',
   isa => 'Str',
-  required => 1,
-);
+  required => 1;
 
-has 'composite', (
+has 'composite',
   is => 'ro',
   isa => 'Str',
-  required => 1,
-);
+  required => 1;
 
-has 'attributes', (
+has 'attributes',
   is => 'ro',
   isa => 'HashRef',
-  required => 1,
-);
+  required => 1;
 
 sub parse_accept_entry {
   my ($class, $header_str) = @_;
@@ -62,7 +59,7 @@ and L<HTTP::AcceptHeader>.
 
 =head1 SEE ALSO
 
-L<Email::MIME::ContentType>
+L<Email::MIME::ContentType>, L<HTTP::AcceptHeader::Field>, L<HTTP::AcceptHeader>
 
 =head1 AUTHOR
 
