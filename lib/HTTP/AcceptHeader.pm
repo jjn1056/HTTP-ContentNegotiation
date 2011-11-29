@@ -2,6 +2,7 @@ package HTTP::AcceptHeader;
 
 our $VERSION = '0.01';
 
+use 5.008008;
 use Moose;
 use HTTP::AcceptHeader::Entry;
 use HTTP::AcceptHeader::Field;
