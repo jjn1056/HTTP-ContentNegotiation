@@ -28,13 +28,11 @@ L<HTTP::AcceptHeader::Entry>, L<HTTP::AcceptHeader::Field>
 
 =head1 AUTHOR
 
-John Napiorkowski, C<jjnapiork@cpan.org>
+See L<HTTP::ContentNegotiation> for author information
 
 =head1 COPYRIGHT & LICENSE
 
-Copyright 2011 John Napiorkowski
-
-This program is free software; you can redistribute it and/or modify it under the same terms as Perl itself.
+See L<HTTP::ContentNegotiation> for licensing and copyright information.
 
 =cut
 

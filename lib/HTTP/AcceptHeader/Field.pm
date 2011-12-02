@@ -36,11 +36,11 @@ L<HTTP::AcceptHeader::Entry>, L<HTTP::AcceptHeader>
 
 =head1 AUTHOR
 
-See L<HTTP::AcceptHeader> for author information
+See L<HTTP::ContentNegotiation> for author information
 
 =head1 COPYRIGHT & LICENSE
 
-See L<HTTP::AcceptHeader> for licensing and copyright information.
+See L<HTTP::ContentNegotiation> for licensing and copyright information.
 
 =cut
 
