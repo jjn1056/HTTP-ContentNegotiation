@@ -18,23 +18,20 @@ has 'attributes',
   isa => 'HashRef',
   required => 1;
 
+sub media_type { sprintf "%s/%s",  $_[0]->discrete, $_[0]->composite }
+sub quality { shift->attributes->{q} || 1 }
+
 sub parse_accept_entry {
   my ($class, $header_str) = @_;
   my $parsed = Email::MIME::ContentType::parse_content_type($header_str);
   return $class->new($parsed);
 }
 
-sub content_type { sprintf "%s/%s",  $_[0]->discrete, $_[0]->composite }
-
 __PACKAGE__->meta->make_immutable;
 
 =head1 NAME
 
 HTTP::AcceptHeader::Entry - Utility object for HTTP Accept Header Entries
-
-=head1 VERSION
-
-version 0.01
 
 =head1 SYNOPSIS
 
@@ -44,7 +41,6 @@ version 0.01
     my $entry = HTTP::AcceptHeader::Entry->parse_accept_entry($entry_string);
 
     say $entry->content_type; ## "text/html"
-
 
 =head1 DESCRIPTION
 
